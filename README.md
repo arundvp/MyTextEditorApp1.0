@@ -1,1 +1,1 @@
-# MyTextEditorApp1.0
+# Text Editor Starter Code
