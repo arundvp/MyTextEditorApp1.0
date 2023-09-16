@@ -153,7 +153,6 @@ Heroku Application: https://mytexteditor11-3f6bee4cf2a3.herokuapp.com/
   ![MyTextEditor Heroku App](./public/images/mytexteditor11-herokuapp.jpg)
   ![PWA Install](./public/images/pwa-install.jpg)  
   ![Lighthouse PWA](./public/images/lighthouse-pwa.jpg)
-  ![Heroku Deployment](./public/images/deploy-heroku.jpg)
   ![Manifest Json](./public/images/manifest-json.jpg)
   ![Indexed DB](./public/images/indexedDB.jpg)
   ![Service Worker](./public/images/service-worker.jpg)
