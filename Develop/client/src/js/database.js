@@ -1,5 +1,7 @@
+// Import the openDB function from the idb external library.
 import { openDB } from 'idb';
 
+// Initialize the database.
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -12,10 +14,55 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => console.error('putDb not implemented');
+// logic to a method that accepts some content and adds it to the database
+export const putDb = async (content) => {
+  console.log("Putting data to the database");
+
+  // Open the "jate" IndexedDB and wait until it's opened.
+  const jateDb = await openDB("jate", 1);
+
+  // Start a new read/write transaction on the "jate" object store.
+  const tx = jateDb.transaction("jate", "readwrite");
+
+  // Access the "jate" object store to store data.
+  const store = tx.objectStore("jate");
+
+  // Put the given content with an ID of 1 into the "jate" object store.
+  const request = store.put({ id: 1, value: content });
+
+  // Log the request object, which represents the put operation.
+  console.log(request);
+
+  // Await the result of the put operation.
+  const result = await request;
+
+  // Log a success message and return the saved value.
+  console.log("Data saved to the database", result);
+  return result?.value;
+};
 
 // TODO: Add logic for a method that gets all the content from the database
-export const getDb = async () => console.error('getDb not implemented');
+export const getDb = async () => {
+  console.log("Getting data from the database");
+
+  // Open the "jate" IndexedDB and wait until it's opened.
+  const jateDb = await openDB("jate", 1);
+
+  // Start a new read-only transaction on the "jate" object store.
+  const tx = jateDb.transaction("jate", "readonly");
+
+  // Access the "jate" object store to retrieve data.
+  const store = tx.objectStore("jate");
+
+  // Get all records from the "jate" object store.
+  const request = store.getAll();
+
+  // Await the result of the getAll() operation to retrieve data.
+  const result = await request;
+
+  // Return the retrieved data.
+  return result;
+};
+
 
 initdb();

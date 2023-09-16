@@ -1,3 +1,4 @@
+// Import the editor class
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
@@ -6,6 +7,7 @@ import '../css/style.css';
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
+// Load spinner
 const loadSpinner = () => {
   const spinner = document.createElement('div');
   spinner.classList.add('spinner');
