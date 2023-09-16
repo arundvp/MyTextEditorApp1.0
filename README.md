@@ -1,7 +1,7 @@
 # MyTextEditorApp1.0
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## **MyTextEditorApp1.0: Just Another Text Editor
+## MyTextEditorApp1.0: Just Another Text Editor
 
 The code outlines a Progressive Web App (PWA) text editor that leverages the CodeMirror library for editing, saves content to IndexedDB for persistent storage, provides offline capabilities using Workbox and service workers, and is hosted on an Express.js server.
 
