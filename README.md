@@ -154,8 +154,9 @@ Heroku Application: https://mytexteditor11-3f6bee4cf2a3.herokuapp.com/
   ![PWA Install](./public/images/pwa-install.jpg)  
   ![Lighthouse PWA](./public/images/lighthouse-pwa.jpg)
   ![Manifest Json](./public/images/manifest-json.jpg)
-  ![Indexed DB](./public/images/indexedDB.jpg)
   ![Service Worker](./public/images/service-worker.jpg)
+  ![Indexed DB](./public/images/indexedDB.jpg)
+  
   
 ## License <a name="license"></a>
   This project is licensed under the MIT license.
